@@ -35,6 +35,7 @@ retrieve 5 results from index 0; <br>
   available for json and application/x-www-form-urlencoded both format <br>
 <br>
 - /product/{productId}  post <br>
+
 ````
   { 
     "creditCardNumber" : 123,
