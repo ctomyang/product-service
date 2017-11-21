@@ -37,13 +37,13 @@ insert product into derby <br>
 
 - /product/{productId}  post <br>
 
-````
+  ````
   { 
     "creditCardNumber" : 123,
     "quantity" : 20, 
     "amount" 50 
   } 
-````
+  ````
   
   purchase product and create order if success, then send the email. <br>
   available for json and application/x-www-form-urlencoded both format <br>
