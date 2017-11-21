@@ -32,8 +32,11 @@ public class ProductServiceImpl implements ProductService{
     @Override
     @Transactional
     public void purchaseProduct(Order order, String productId) throws CreditCardException, ProductException, EmailException {
+        //check product quantity in storage
         if(productRepository.checkInventory(order, productId)) {
+            //check payment
             if(chargeService.chargePayment(order.getCreditCardNumber(), order.getAmount())) {
+                //re check the quantity
                 if (productRepository.deductInventory(order.getQuantity(), productId)) {
                     //send email and update ship(better to use jms handle it in asynchronized way)
                     order.setProduct(productRepository.getProductById(productId));
