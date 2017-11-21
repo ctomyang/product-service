@@ -16,15 +16,13 @@ spring-boot, derby, mailsender. <br>
  
  API
  ====
-/order?firstResult=0 get <br>
----
+#### /order?firstResult=0 get <br>
 - retrieve 5 results from index 0; <br>
  <br>
-/product?firstResult=0 get <br>
----
+#### /product?firstResult=0 get <br>
 - retrieve 5 results from index 0; <br>
 <br>
-/product post <br>
+#### /product post <br>
   insert product into derby <br>
   ````
   {  <br>
@@ -32,10 +30,9 @@ spring-boot, derby, mailsender. <br>
     "quantity" : 12,  <br>
     "price" : 20 <br>
   } <br>
-
   available for json and application/x-www-form-urlencoded both format <br>
 <br>
-/product/{productId}  post <br>
+#### /product/{productId}  post <br>
   { <br>
     "creditCardNumber" : 123, <br>
     "quantity" : 20, <br>
