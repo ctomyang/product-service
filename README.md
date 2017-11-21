@@ -12,17 +12,15 @@ spring-boot, derby, mailsender. <br>
 >>public final static String toEmail = ""; <br>
 >>public final static String fromEmail = ""; <br>
  <br>
- <br>
- 
  API
  ====
--/order?firstResult=0 get <br>
+#### /order?firstResult=0 get <br>
 retrieve 5 results from index 0; <br>
  <br>
-/product?firstResult=0 get <br>
+#### /product?firstResult=0 get <br>
 retrieve 5 results from index 0; <br>
 <br>
-/product post <br>
+#### /product post <br>
   insert product into derby <br>
   ````
   { 
